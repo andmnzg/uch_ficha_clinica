@@ -90,7 +90,6 @@ def agregar_tratamiento():
 
 #############################################################################
 
-#############################################################################
 # Antecedentes
 #############################################################################
 antecedentes = tk.Label(
@@ -260,48 +259,90 @@ tk.Button(
 diagnostico = tk.Entry(master, bg=default_bg)
 diagnostico.grid(row=25, column=1)
 
-tk.Button(
-    master,
-    text="Tratamiento",
-    bg=default_bg,
-    command=agregar_tratamiento,
-).grid(row=26, column=0)
-tratamiento = tk.Entry(master, bg=default_bg)
-tratamiento.grid(row=26, column=1)
+### TODO
+amedicos = tk.Button(master, text="antecedentes medicos", bg="light gray")
+amedicos.grid(row=6, column=0)
+medicamentos = tk.Button(master, text="medicamentos", bg="light gray")
+medicamentos.grid(row=7, column=0)
 
 
-def read_data() -> pd.DataFrame:
-    if Path("data.xlsx").exists():
-        return pd.read_excel("data.xlsx")
-    else:
-        return pd.DataFrame(
-            {
-                "nombre": [],
-                "edad": [],
-                "prevision": [],
-                "educacion": [],
-                "ocupacion": [],
-                # "Sexo": [],
-                # "Fecha": [],
-                # "Motivo": [],
-                # "Anamnesis": [],
-                # "Antecedentes familiares": [],
-                # "Hospitalizaciones": [],
-                # "Cirugías": [],
-                # "Tabaco": [],
-                # "IPA": [],
-                # "Alcohol": [],
-                # "Drogas": [],
-                # "Alimentación": [],
-                # "Actividad física": [],
-                # "Defecatorio": [],
-                # "Urinario": [],
-                # "Sueño": [],
-                # "Sexual": [],
-                # "Diagnóstico": [],
-                # "Tratamiento": [],
-            }
-        )
+e6.grid(row=6, column=1)
+e7.grid(row=7, column=1)
+anamnesis = tk.Label(master, text="anamnesis proxima")
+anamnesis.grid(row=8, column=1)
+motivo = tk.Label(master, text="motivo de consulta")
+motivo.grid(row=9, column=0)
+anamnesis = tk.Label(master, text="anamnesis")
+anamnesis.grid(row=10, column=0)
+e8 = tk.Entry(master, bg="light gray")
+e8.grid(row=9, column=1)
+e9 = tk.Entry(master, bg="light gray")
+e9.grid(row=10, column=1)
+habitos = tk.Label(master, text="anamnesis remota")
+habitos.grid(row=11, column=1)
+familiares = tk.Button(master, text="antecedentes familiares", bg="light gray")
+familiares.grid(row=12, column=0)
+hospital = tk.Button(master, text="hospitalizaciones", bg="light gray")
+hospital.grid(row=13, column=0)
+quirurgico = tk.Button(master, text="cirugia", bg="light gray")
+quirurgico.grid(row=14, column=0)
+tabaco = tk.Label(master, text="tabaco")
+tabaco.grid(row=15, column=0)
+ipa = tk.Label(master, text="IPA")
+ipa.grid(row=15, column=3)
+oh = tk.Label(master, text="alcohol")
+oh.grid(row=16, column=0)
+drogas = tk.Label(master, text="drogas")
+drogas.grid(row=17, column=0)
+alimentacion = tk.Label(master, text="alimentacion")
+alimentacion.grid(row=18, column=0)
+afisica = tk.Label(master, text="ac.fisica")
+afisica.grid(row=19, column=0)
+defecacion = tk.Label(master, text="defecatorio")
+defecacion.grid(row=20, column=0)
+orina = tk.Label(master, text="urinario")
+orina.grid(row=21, column=0)
+sueño = tk.Label(master, text="sueño")
+sueño.grid(row=22, column=0)
+sexual = tk.Label(master, text="sexual")
+sexual.grid(row=23, column=0)
+e10 = tk.Entry(master, bg="light gray")
+e10.grid(row=12, column=1)
+e11 = tk.Entry(master, bg="light gray")
+e11.grid(row=13, column=1)
+e12 = tk.Entry(master, bg="light gray")
+e12.grid(row=14, column=1)
+e13 = tk.Entry(master, bg="light gray")
+e13.grid(row=15, column=1)
+e14 = tk.Entry(master, bg="light gray")
+e14.grid(row=15, column=4)
+e15 = tk.Entry(master, bg="light gray")
+e15.grid(row=16, column=1)
+e16 = tk.Entry(master, bg="light gray")
+e16.grid(row=17, column=1)
+e17 = tk.Entry(master, bg="light gray")
+e17.grid(row=18, column=1)
+e18 = tk.Entry(master, bg="light gray")
+e18.grid(row=19, column=1)
+e19 = tk.Entry(master, bg="light gray")
+e19.grid(row=20, column=1)
+e20 = tk.Entry(master, bg="light gray")
+e20.grid(row=21, column=1)
+e21 = tk.Entry(master, bg="light gray")
+e21.grid(row=22, column=1)
+e22 = tk.Entry(master, bg="light gray")
+e22.grid(row=23, column=1)
+ef = tk.Label(master, text="examen fisico")
+ef.grid(row=24, column=1)
+diagnostico = tk.Button(master, text="diagnostico", bg="light gray")
+diagnostico.grid(row=25, column=0)
+tratamiento = tk.Button(master, text="tratamiento", bg="light gray")
+tratamiento.grid(row=26, column=0)
+e23 = tk.Entry(master, bg="light gray")
+e23.grid(row=25, column=1)
+e24 = tk.Entry(master, bg="light gray")
+e24.grid(row=26, column=1)
+#
 
 
 def get_input():
