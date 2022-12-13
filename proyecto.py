@@ -242,10 +242,10 @@ sexual.grid(row=23, column=1)
 #############################################################################
 # Examen Físico
 #############################################################################
-examen_fisico = tk.Label(
-    master, text="Exámen Físico", font=default_title_font_size, bg=default_title_bg
-)
-examen_fisico.grid(row=24, columnspan=2)
+examen_fisico = tk.Label(master, text="Exámen Físico")
+examen_fisico.grid(row=24, column=0)
+examenfisico= tk.Text(master, width=20, height=3)
+examenfisico.grid(row=24, column=1)
 
 
 tk.Button(
@@ -295,6 +295,7 @@ def read_data() -> pd.DataFrame:
                 # "Urinario": [],
                 # "Sueño": [],
                 # "Sexual": [],
+                # "examenfisico": [],
                 # "Diagnóstico": [],
                 # "Tratamiento": [],
             }
