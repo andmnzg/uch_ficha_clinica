@@ -1,1 +1,2 @@
-# uch_ficha_clinica
+# Ficha clínica 
+Proyecto Electivo Informática Médica
